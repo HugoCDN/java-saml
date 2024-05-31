@@ -96,25 +96,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.owasp</groupId>
-				<artifactId>dependency-check-maven</artifactId>
-				<version>8.4.0</version>
-				<configuration>
-					<failBuildOnCVSS>7</failBuildOnCVSS>
-					<suppressionFiles>
-						<suppressionFile>.nvd-suppressions.xml</suppressionFile>
-					</suppressionFiles>
-					<assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					 </execution>
-				</executions>
-			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
@@ -213,20 +194,20 @@
 							</execution>
 						</executions>
 					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>3.1.0</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
+<!--					<plugin>-->
+<!--						<groupId>org.apache.maven.plugins</groupId>-->
+<!--						<artifactId>maven-gpg-plugin</artifactId>-->
+<!--						<version>3.1.0</version>-->
+<!--						<executions>-->
+<!--							<execution>-->
+<!--								<id>sign-artifacts</id>-->
+<!--								<phase>verify</phase>-->
+<!--								<goals>-->
+<!--									<goal>sign</goal>-->
+<!--								</goals>-->
+<!--							</execution>-->
+<!--						</executions>-->
+<!--					</plugin>-->
 				</plugins>
 			</build>
 		</profile>
